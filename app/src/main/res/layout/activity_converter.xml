@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/converterRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F6FA"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/converterTitleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Converter Recursos"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#1F2937" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Selecione as moedas, informe o valor e realize a conversão."
+            android:textSize="15sp"
+            android:textColor="#6B7280" />
+
+        <!-- Moeda de origem -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="Moeda de origem"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#374151" />
+
+        <Spinner
+            android:id="@+id/sourceCurrencySpinner"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="8dp"
+            android:background="@android:drawable/btn_dropdown" />
+
+        <!-- Moeda de destino -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="Moeda de destino"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#374151" />
+
+        <Spinner
+            android:id="@+id/targetCurrencySpinner"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="8dp"
+            android:background="@android:drawable/btn_dropdown" />
+
+        <!-- Valor -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="Valor a converter"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#374151" />
+
+        <EditText
+            android:id="@+id/valueEditText"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="8dp"
+            android:hint="Digite o valor"
+            android:inputType="numberDecimal"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:background="@android:drawable/edit_text"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/executeConversionButton"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="28dp"
+            android:text="Converter"
+            android:textAllCaps="false"
+            android:textSize="16sp" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp"
+            android:visibility="gone" />
+
+        <!-- Resultado -->
+        <LinearLayout
+            android:id="@+id/resultContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:background="@drawable/bg_result_box"
+            android:orientation="vertical"
+            android:padding="18dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Resultado da conversão"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#374151" />
+
+            <TextView
+                android:id="@+id/resultTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="R$ 0,00"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#111827" />
+
+            <TextView
+                android:id="@+id/quoteTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Cotação utilizada: --"
+                android:textSize="14sp"
+                android:textColor="#6B7280" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

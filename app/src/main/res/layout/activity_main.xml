@@ -1,19 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="#F5F6FA"
+    android:fillViewport="true">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical"
+        android:padding="24dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Carteira"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#1F2937" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Saldos disponíveis para conversão"
+            android:textSize="15sp"
+            android:textColor="#6B7280" />
+
+        <!-- Card Real -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/bg_card_wallet"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Real Brasileiro"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#374151" />
+
+            <TextView
+                android:id="@+id/brlBalanceTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="R$ 100.000,00"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#111827" />
+        </LinearLayout>
+
+        <!-- Card Dólar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/bg_card_wallet"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dólar Americano"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#374151" />
+
+            <TextView
+                android:id="@+id/usdBalanceTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="$ 50.000,00"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#111827" />
+        </LinearLayout>
+
+        <!-- Card Bitcoin -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/bg_card_wallet"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bitcoin"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#374151" />
+
+            <TextView
+                android:id="@+id/btcBalanceTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="0,500000 BTC"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#111827" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/convertButton"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="32dp"
+            android:text="Converter Recursos"
+            android:textAllCaps="false"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+</ScrollView>
