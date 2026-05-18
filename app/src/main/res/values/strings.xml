@@ -1,3 +1,20 @@
 <resources>
-    <string name="app_name">carteiravirtual</string>
+    <string name="app_name">Carteira Virtual</string>
+    <string name="title_wallet">Minha Carteira</string>
+    <string name="currency_brl">Real Brasileiro</string>
+    <string name="currency_usd">Dólar Americano</string>
+    <string name="currency_btc">Bitcoin</string>
+    <string name="btn_convert">Converter Recursos</string>
+    <string name="title_converter">Converter Recursos</string>
+    <string name="label_from">De (Moeda de Origem)</string>
+    <string name="label_to">Para (Moeda de Destino)</string>
+    <string name="hint_amount">Valor a converter</string>
+    <string name="btn_confirm">Converter</string>
+    <string name="label_result">Resultado da Conversão</string>
+    <string name="error_same_currency">Selecione moedas diferentes</string>
+    <string name="error_invalid_amount">Informe um valor válido maior que zero</string>
+    <string name="error_insufficient_balance">Saldo insuficiente para realizar a conversão</string>
+    <string name="error_api">Erro ao consultar cotação. Verifique sua conexão e tente novamente.</string>
+    <string name="loading">Consultando cotação…</string>
+    <string name="content_desc_back">Voltar</string>
 </resources>
