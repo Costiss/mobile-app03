@@ -70,6 +70,10 @@ class ConverterActivity : AppCompatActivity() {
         }
 
         val pair = resolveApiPair(from, to)
+        if (pair == null) {
+            Toast.makeText(this, getString(R.string.error_api), Toast.LENGTH_LONG).show()
+            return
+        }
         fetchAndConvert(from, to, amount, pair)
     }
 
@@ -84,7 +88,7 @@ class ConverterActivity : AppCompatActivity() {
         setOf(from, to) == setOf("USD", "BRL") -> "USD-BRL"
         setOf(from, to) == setOf("BTC", "BRL") -> "BTC-BRL"
         setOf(from, to) == setOf("BTC", "USD") -> "BTC-USD"
-        else -> "USD-BRL"
+        else -> null
     }
 
     private fun calculateConverted(from: String, to: String, amount: Double, rate: Double): Double {
