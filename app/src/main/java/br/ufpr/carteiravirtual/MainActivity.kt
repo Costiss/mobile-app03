@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import java.text.NumberFormat
 import java.util.Locale
 
@@ -19,6 +20,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        // Preserva o tema do App ainda que o Androide mude
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
 
         tvBrl = findViewById(R.id.tv_brl_balance)
         tvUsd = findViewById(R.id.tv_usd_balance)

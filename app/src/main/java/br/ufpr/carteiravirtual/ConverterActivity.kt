@@ -84,7 +84,7 @@ class ConverterActivity : AppCompatActivity() {
         else -> 0.0
     }
 
-    private fun resolveApiPair(from: String, to: String): String = when {
+    private fun resolveApiPair(from: String, to: String): String? = when {
         setOf(from, to) == setOf("USD", "BRL") -> "USD-BRL"
         setOf(from, to) == setOf("BTC", "BRL") -> "BTC-BRL"
         setOf(from, to) == setOf("BTC", "USD") -> "BTC-USD"
